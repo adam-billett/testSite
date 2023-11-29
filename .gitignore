@@ -1,0 +1,10 @@
+# ignore whatever is in here in the git pushes. Hides these files away from git
+
+*.pyc
+__pycache__
+db.sqlite3
+/env
+*.env
+.vscode
+.env/
+.env
