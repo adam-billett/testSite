@@ -11,3 +11,9 @@ class TestingTable(models.Model):
     testVar = models.CharField(max_length=5)
     age = models.IntegerField()
 
+
+class MoreTest(models.Model):
+    ident = models.IntegerField()
+    length = models.IntegerField()
+    Shape = models.CharField(max_length=100)
+
