@@ -1,0 +1,6 @@
+SECRET_KEY=+z(e5&)4)fa9sxw^_9l9g2+wk$n#k6#zn7_*4upt38b*$)hh=w
+DB_NAME=webTest
+DB_USER=postgres
+DB_PASSWORD=Bearcat
+DB_HOST=localhost
+DB_PORT=5432
