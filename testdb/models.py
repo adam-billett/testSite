@@ -5,6 +5,7 @@ from django.db import models
 class Users(models.Model):
     username = models.CharField(max_length=50)
     user_pass = models.CharField()
+    role = models.CharField()
 
 
 class TestingTable(models.Model):
