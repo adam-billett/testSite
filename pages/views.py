@@ -26,3 +26,7 @@ def careers(request):
 
 def login(request):
     return render(request, 'pages/login.html', {})
+
+
+def blog(request):
+    return render(request, 'pages/blog.html', {})

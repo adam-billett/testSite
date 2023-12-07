@@ -5,7 +5,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MVPS - Home</title>
+{% block title %}
+    Home - MVPS
+{% endblock %}
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -56,14 +58,16 @@
     </style>
 </head>
 <body>
+{% block content %}
     <header>
         <h1>MVPS</h1>
     </header>
 
     <section>
-        <img src="comp_img.png" alt="comp image">
+        <img src="mvps_logo.jpg" alt="comp image">
         <p>Address: Comp address</p>
         <p>Phone: ##########</p>
         <p>Email: @mvpsohio.com</p>
     </section>
+{% endblock %}
 </body>
