@@ -1,6 +1,7 @@
 # pages/views.py
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
+from django.contrib.auth.forms import UserCreationForm
 from .forms import LoginForm
 
 
@@ -46,3 +47,16 @@ def login(request):
 
 def blog(request):
     return render(request, 'pages/blog.html', {})
+
+
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect('home')
+    else:
+        form = UserCreationForm()
+
+    return render(request, 'pages/register.html', {'form', form})
