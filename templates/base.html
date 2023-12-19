@@ -76,7 +76,8 @@
 <body>
     <!-- links in the taskbar to all the other pages etc -->
     <nav>
-        <img src="mvps_logo.jpg", alt="mvps_logo.jpg">
+        {% load static %}
+        <img src="{% static 'mvps_logo.jpg' %}" alt="MVPS Logo">
         <a href="{% url 'home' %}">Home</a>
         <a href="{% url 'about' %}">About Us</a>
         <a href="{% url 'blog' %}">Blog</a>
