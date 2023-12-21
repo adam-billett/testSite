@@ -10,24 +10,25 @@
 {% endblock %}
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f5f5f5;
         }
         header {
             background-color: #333;
-            color: #fff
-            padding: 10px;
+            color: #fff;
+            padding: 20px;
             text-align: center;
         }
         section {
             max-width: 800px;
-            margin: 20px auto;
-            background-color: #fff
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 100px auto 20px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
         img {
             max-width: 100%;
@@ -48,12 +49,21 @@
         }
         p {
             color: #333;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
         }
-        nav {
+        .cta-button {
+            display: inline-block;
+            padding: 12px 20px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: #fff;
             background-color: #333;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
         }
-        nav a {
-            color: #00ff00;
+        .cta-button:hover {
+            background-color: #555;
         }
     </style>
 </head>
@@ -65,10 +75,18 @@
 
     <section>
         {% load static %}
-        <img src="{% static 'christmas.png' %}", width="500">
+        <img src="{% static 'christmas.png' %}" width="500" alt="Christmas Image">
         <p>Address: Comp address</p>
         <p>Phone: ##########</p>
         <p>Email: @mvpsohio.com</p>
+        <img src="{% static 'corey.png' %}" width="50" alt="Corey Image">
+
+        <!-- Call-to-action button -->
+        <a href="{% url 'contact' %}" class="cta-button">Get in Touch</a>
     </section>
 {% endblock %}
+
+<script>
+    document.body.style.paddingTop = document.quertSelector('nav').offsetHeight + 'px';
+</script>
 </body>
