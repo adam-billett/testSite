@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title%}MVPS{% endblock %}</title>
+    <title>{% block title %}MVPS{% endblock %}</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            background: #f5f5f5;
-            color: #333;
+            background: #333;
+            color: #EEE;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -21,9 +21,8 @@
         }
 
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
+            color: #006630;
+            padding: 5px;
             text-align: center;
         }
 
@@ -32,7 +31,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: #333;
+            background-color: #00490B;
             padding: 10px 0;
             z-index: 100;
             display: flex;
@@ -41,38 +40,31 @@
         }
 
         nav a {
-            color: #fff;
+            color: #000000;
             text-decoration: none;
             margin: 0 15px;
             font-size: 1rem;
         }
 
-        nav img {
-            width: 80px;
-            height: 60px;
-            border-radius: 20%;
-            margin-right: 10px;
-        }
-
         section {
-            max-width: 800px;
+            max-width: 1200px;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
-            margin-top: 20px; /* Adjusted margin for the fixed navbar */
+            background-color: #DDD;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-top: 80px;
         }
 
         h1 {
             font-size: 3rem;
-            margin-bottom: 0px;
-            color: #888;
+            margin-bottom: 10px;
+            color: #00490B;
         }
 
         p {
             font-size: 1.2rem;
-            margin-bottom: 15px;
-            color: #555;
+            margin-bottom: 20px;
+            color: #777;
         }
 
         a {
@@ -80,26 +72,36 @@
             padding: 12px 20px;
             font-size: 1rem;
             text-decoration: none;
-            color: #fff;
-            background-color: #333;
+            color: #FFF;
+            background-color: #00490B;
             border-radius: 8px;
             transition: background-color 0.3s ease;
         }
 
-        a:hover {
-            background-color: #555;
+
+        div a:hover {
+            background-color: #FFFFFF;
         }
+
+        nav img {
+            width: 80px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 10px;
+            background-color: transparent;
+        }
+
 
         footer {
             margin-top: 40px;
             padding: 15px 0;
-            color: #fff;
+            color: #EEE;
             text-align: center;
+            background-color: #333;
         }
     </style>
 </head>
 <body>
-    <!-- links in the taskbar to all the other pages etc -->
     <nav>
         {% load static %}
         <a href="{% url 'home' %}">
@@ -116,8 +118,7 @@
         </div>
     </nav>
 
-     <script>
-        // Adjust body padding based on navbar height
+    <script>
         document.body.style.paddingTop = document.querySelector('nav').offsetHeight + 'px';
     </script>
 
@@ -126,6 +127,9 @@
     </section>
 
     <footer>
+        <p>150 Janney Dr. Dayton, OH</p>
+        <p>937-224-1800</p>
+        <p>info@mvpsohio.com</p>
         <p>&copy; 2023 MVPS. All rights reserved.</p>
     </footer>
 </body>
