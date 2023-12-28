@@ -61,5 +61,6 @@ def register(request):
 
     return render(request, 'pages/register.html', {'form': form})
 
+
 def meet(request):
     return render(request, 'pages/meet.html', {})
